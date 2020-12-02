@@ -4,12 +4,54 @@
 	<link rel="icon" href="images/heart.png" type="image/png">
   <title>사랑하는 수현이에게</title>
   <meta charset="utf-8">
-	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet">
+<style>
+	body{
+	background-color: black;
+	color: white;
+	font-size: 25px;
+	font-family: 'Noto Serif KR', serif;
+}
+	p{
+	text-align: center;
+	font-size: 20px;
+	margin-top: 100px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+
 </head>
 
 
 <body>
-	
+	<p>&#8595;click&#8595;</p>
+  <img src=assets/images/cake1.jpg width="50%" class="center" alt="Play Button" onclick="StartOrStop('audio1.mp3')">
+	<audio id="myAudio">
+	  <source src="assets/sound/audio1.ogg" type="audio/ogg">
+	  <source src="assets/sound/audio1.mp3" type="audio/mpeg">
+	</audio>
+	<marquee direction="left" scrolldelay="-10">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	<a href="present.html"><img src=assets/images/heart.png width="30px" class="before"></a>
+		사랑하는 수현이에게. 벌써 12월 3일이야! 생일축하해! 우리 실제로 못 본지 두 달이 되어가네. 너무 보고싶어ㅜㅡㅠ
+		같이 생일 케이크도 못 하니까 이렇게 준비해봤어ㅎ.ㅎ 독일 갔다 오느라, 자가격리 하느라 힘들텐데 건강하게 견뎌줘서 고맙고 사랑해!
+		나랑 같이 또 재밌는 거 많이 하자~~~<a href="present.html"><img src=assets/images/heart.png width="30px" class="before"></a></marquee>
+
+	<script>
+	function StartOrStop(audioFile) {
+var audio = document.getElementById("myAudio");
+if (!audio.src || audio.src !== audioFile) audio.src = audioFile;
+if (audio.paused == false)
+    audio.pause();
+else
+    audio.play();
+}
+</script>
 
 </body>
 </html>
